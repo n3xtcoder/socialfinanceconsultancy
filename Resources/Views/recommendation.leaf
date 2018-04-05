@@ -1,0 +1,27 @@
+#extend("base")
+
+#export("title") { #(name)! }
+
+#export("content") {
+<div class="topbar">
+    <div class="user">
+        <img src="/images/image.png">
+        <h2>John Brown</h2>
+        <p>HelloBravo</p>
+    </div>
+
+    <div class="graph">
+        <img src="/images/image-2.png">
+    </div>
+</div>
+
+<div class="recommendation">
+    <p>Well done! Here are our recommendations for you:</p>
+    <ul>
+        #loop(recommendations, "recommendation") {
+            <li> #(recommendation) </li>
+        }
+    </ul>
+</div>
+}
+
